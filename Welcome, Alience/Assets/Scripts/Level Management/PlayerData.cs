@@ -1,0 +1,37 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[System.Serializable]
+public class PlayerData
+{
+    public int level;
+    public float health;
+    public float shield;
+    public float mana;
+
+    public float Coins;
+    public float Booms;
+    public float Cocktails;
+
+
+    public float[] position;
+
+    public PlayerData(Player player)
+    {
+        level = player.level;
+        health = player.health;
+        shield = player.Shield;
+        mana = player.Mana;
+        Coins = player.Coins;
+        Booms = player.Booms;
+        Cocktails = player.Cocktails;
+
+
+
+        position = new float[3];
+        position[0] = player.transform.position.x;
+        position[1] = player.transform.position.y;
+        position[2] = player.transform.position.z;
+    }
+}
